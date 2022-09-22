@@ -1,22 +1,84 @@
 <!DOCTYPE>
-<html lang="isl"></html>
+<html lang="isl">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Könnun</title>
-    <h1>Könnun</h1>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Könnun um forritun</title>
 </head>
 <body>
-    <a href="../index.html">Forsíða</a> 
-    <a href="um.html">Um</a> 
-    <a href="konnun.html">Könnun</a> 
-    <a href="baekur.html">Bækur</a>
-    </body>
-    <br>
+    <header>
+        <h1>Könnunn um forritun</h1>
+    </header>
+
+<div class="content">
+    <nav>
+        <ul>
+            <li><a href="../index.html">Forsíða</a></li>
+            <li><a href="um.html">Um forrit og forritun</a></li> 
+            <li><strong><a href="konnun.html">Könnun um forritun</a></strong></li> 
+            <li><a href="baekur.html">Bækur um forritun</a></li>
+        </ul>
+    </nav>
+
+
+<main id="efni">
+    <form action="./" method="get">
+    <fieldset>
+        <legend>Reynsla af forritun</legend>
+    <div>
+        <label for="forritunarmal_kann">Forritunarmál sem ég kann best</label>
+        <input
+        list="forritunarmal"
+        required
+        id="forritunalmal_kann"
+        name="forritunarmal_kann"
+        />
+    </div>
+    <div>
+        <label for="forritunarmal_kunnatta">
+            Hversu vel kanntu forritunarmálið á skalanum 0 til 10?</label>
+        <input 
+            type="range"
+            min="0"
+            max="10"
+            value="0"
+            id="forritunarmal_kunnatta"
+            name="forritunarmal_kunnatta"
+        />
+    </div>
+
+    <div>
+        <label for="forritunarmal_best">Hvað finnst þér best við forritunarmálið?</label>
+        <input 
+        type="text" 
+        required id="forritunarmal_best" 
+        name="forritunarmal_best"
+        />
+    </div>
+    <div>
+     <label for="forritunarmal_verst">Hvað finnst þér verst við forritunarmálið?</label>
+        <input 
+        type="text" 
+        required id="forritunarmal_verst" 
+        name="forritunarmal_verst"
+        />
+    </div>
+    <div>
+        <label for="forritunarmal_daemi">Dæmi um forritun</label>
+        <input type="file" id="forritunarmal_daemi" name="forritunarmal_daemi"/>
+    
+    </div>
+    </fieldset>
+
 <fieldset>
-    <legend>Reynsla af forritun</legend>
-    <select>
+    <legend>
+        <label for="forritunarmal_laera">Forritunarmal sem mig langar að læra</label>
+    </legend>
+
+<select name="forritunarmal_laera" id="forriturnarmal_laera" multiple required>
         <option> Python</option>
         <option> C++</option>
         <option> Java</option>
@@ -189,25 +251,18 @@
         <option> TypeScript</option>
         <option> Raku</option>
     </select>
-<br>
-<label for="points">Hversu vel kanntu forritunarmálið á skalanum 0-10</label>
-<input type="range" id="points" min="0" max="10">
-<br>
-<br>
-<label>Dæmi um forrit:</label>
-<br>
-<br>
-<form>
-<label for="best">Hvað finnst þér best við forritunarmálið?</label>
-<br>
-<input type="text" id="best" required>
-<br>
-<label for="verst">Hvað finnst þér verst við forritunarmálið?</label>
-<br>
-<input type="text" id="verst" name="verst" required> 
-</form>
-<br>
-<label>Dæmi um forrit</label>
+
+<div>
+<label for="hvers_vegna">Hvers vegna langar þig að læra þetta forritunarmal?</label>
+<select id="hvers_vegna" name="hvers_vegna">
+    <option>Veldur úr listanum (Sjálfgefið)</option>
+    <option>vegna vinnu</option>
+    <option>Fyrir akademísk störf</option>
+    <option>Forvitni</option>
+</select>
+</div>
+<!---->
+
 <input type="file">
 </fieldset>
 
@@ -396,25 +451,33 @@
     <option value="Fyrir ademísk störf">Fyrir ademísk störf</option>
     <option value="Forvitni">Forvitni</option>
 </select>
-<br>
-<br>
-<textarea id="w3review" name="w3review" rows="8" cols="30" placeholder="annað"></textarea>
-</fieldset>
-<fieldset>
-    <label>
-    <legend>Hafa samband</legend>
-    </label>
-        <br>
-        <label for="email">Netfang:</label>
-        <br>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <br>
-        <label for="phone">Sími:</label>
-        <br>
-        <input type="tel" name="sími" id="[0-9]{3}-[0-9]{4}" placeholder="000-0000" required>
 
+<div>
+    <label for="annad">Annað;</label>
+    <textarea id="annad" name="annad" cols="40" rows="10"></textarea>
+</div>
 </fieldset>
-<br>
+
+<fieldset>
+    <legend>Hafa samband</legend>
+    <label class="samband">
+    <input type="checkbox" name="hafa samband"> Það má hafa samband við mig
+</label> 
+<div>
+        <label for="email">Netfang:</label>
+        <input type="email" id="email" name="email" id="netfang">
+</div>
+<div>
+     <label for="phone">Sími:</label>
+     <input type="tel" name="sími" id="[0-9]{3}-[0-9]{4}" placeholder="000-0000" required>
+</div>
+</fieldset>
 <button>Svara Könnun</button>
+</main>
+</div>
+</form>
+<p><a class="sr-only" href="#efni">Beint í efni</a></p>
+<footer class="bot-footer">
+    <p><a href="../index.html">Tilbaka á forsíðu </a></p>
+</footer>
 </html>

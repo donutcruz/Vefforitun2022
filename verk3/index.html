@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="is">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Forrit og Forritun</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forsíða</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <h1>Forrit og Forritun</h1> 
+    </header>
 
-</head>
-<h1>Forsíða</h1>
-
-<br>
-
-<body>
-    <a href="index.html">Forsíða</a> 
-    <a href="sidur/um.html">Um Forritun og forritun</a> 
-    <a href="sidur/konnun.html">Könnun</a> 
-    <a href="sidur/baekur.html">Bækur</a>
-<br>
-    <img src="img/tolva.png"  alt="Tolva" >  
-    </body>
-<body>
-    <p> <strong> Á þessari síðu má finna yfirsýn yfir forrit og forritun: </strong> </p>
-
-    <p> Upplýsingar um forrit og forritun, sögu og dæmi um forrit. <a href="sidur/um.html">Um Forrit og forritun
-         </a></p>
-    <p>Könnun um þekkingu og reynslu lesanda af forritun. <a href="sidur/konnun.html">Könnun</a></p>
-    <p>Listi af bókum um forritun. <a href="sidur/baekur.html">Bækur</a></p>
-
-</body>
+    <div class="content">
+      <nav>
+        <ul>
+    <li><strong>Forsíða</strong></a></li>
+    <li><a href="sidur/um.html">Um Forritun og forritun</a></li>
+    <li><a href="sidur/konnun.html">Könnun um forritun</a></li>
+    <li><a href="sidur/baekur.html">Bækur um forritun</a></li>
+    </ul>
+      </nav>
+<div class="wrapper">
+      <main id="content1">
+        <h2>Forritun</h2>
+        <div class="float">
+         <img src="img/tolva.png" alt="Tolva">
+      </div>
+      <div class="innriText">
+        <p>Á þessari síðu má finna yfirsýn yfir forrit og forritun</p>
+      <ul>
+          <li><a href="sidur/um.html">Upplýsingar um Forrit og forritun</a>,sögu og dæmi um forrit </li>
+          <li><a href="sidur/konnun.html">Könnun um þekking og reynslu</a> lesenda af forritun.</li>
+          <li>Listi af<a href="sidur/baekur.html"> bókum um forritun</a></li>
+     </ul>
+      </div>
+      </main>
+      </div>
+    </div>
+    <p><a class="sr-only" href="#efni">Beint í efni</a></p>
+    <footer class="bott-footer"></footer>
+  </body>
 </html>
